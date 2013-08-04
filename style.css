@@ -1,0 +1,206 @@
+@charset "utf-8";
+/*
+Description:Inspired by Balsamiq Mockups For Desktop, created by Michael Zheng.
+Version:1.0.0
+Author:Michael Zheng
+Author URI:http://www.qefqei.com/
+*/
+*{
+	padding:0;
+	margin:0;
+}
+
+abbr[title],acronym[title]{
+	border-bottom:thin dotted;
+	cursor:help;
+}
+
+html{
+	overflow:hidden;
+}
+
+body,div,span,h1,h2,h3,h4,ul,li,img,p,b,textarea,input,select,form,a,table,tr,td{
+	margin:0;
+	padding:0;
+	font-family:"Comic Sans MS",Arial,sans-serif,Verdana,"BitStream vera Sans",Helvetica;
+	list-style-type:none;
+}
+
+body{
+	font-size:12px;
+	cursor:default;
+	overflow:hidden;
+}
+
+img,table{border:0;border-collapse:collapse;}
+
+/*鼠标样式e-resize*/
+.openhand{cursor:url(images/openhand.cur), url(images/openhand.gif), move;}/*cursor:url(link.cur), url(link.gif), auto*/
+.closedhand{cursor:url(images/closedhand.cur), url(images/closedhand.gif), move;}/**/
+.crosshair{ cursor:crosshair;}
+
+/*a{outline:none;}去除链接虚线框*/
+
+/*工具栏*/
+#toolbar{ width:100%; height:60px; position:absolute; z-index:2001; top:0px; left:0px; border-bottom:2px solid #999; background-color:#FFF; overflow:hidden; }
+
+#toolbar ul{}
+#toolbar ul li{float:left; width:auto; height:60px;}
+#toolbar ul li.hover{background-color:#B2E1FF;}
+
+#logo{display:block;width:130px;height:60px;}
+
+.toolBtn{display:block;width:80px;height:55px;padding-top:5px;}
+.toolBtnCurrent{background-color:#7FCEFF;}
+.toolBtnOver{background-color:#B2E1FF;}
+
+a.close,
+a.cancel,
+a.enter,
+.toolBtn .toolIco{
+	background-image:url(images/icons_tool.gif);
+	background-repeat:no-repeat;
+}
+.toolBtn .toolIco{ display:block; width:35px; height:35px; margin:0px auto; }
+.toolBtn .toolIco img{ border:none; width:35px; height:35px; }
+.toolBtn .title{ display:block; width:80px; height:20px; margin:0 auto; text-align:center; }
+
+#toolImage .toolIco{background-position:0 0;}
+#toolPointer .toolIco{background-position:0 -35px;}
+#toolHand .toolIco{background-position:0px -70px;}
+#toolCopy .toolIco{background-position:0px -105px;}
+#toolCssCode .toolIco{background-position:0px -140px;}
+#toolCssFile .toolIco{background-position:0px -175px;}
+#toolHead .toolIco{background-position:0px -210px;}
+#toolHelp .toolIco{background-position:0px -245px;}
+
+/*工作台 **************************************************** */
+#workbench{	width:100%;	height:auto; background:url(images/grid.gif) left top; position:absolute; z-index:1; overflow:hidden; }
+
+.sprite{ position:absolute; z-index:1000; overflow:hidden; }
+.spriteCurrent{ background:#09F;}
+.spriteReset{ background:#999;}
+.spriteOver{ background:#CCC;}
+
+/*内部提示*/
+#innerTip{ display:none; position:absolute; z-index:1999; width:215px; cursor:default;}
+#innerTip .title,
+#innerTip .content,
+#innerTip .bottom{ background-image:url(images/innerTip.gif);}
+
+#innerTip .title{ background-position: left top; background-repeat:no-repeat; height:28px; cursor:move;}
+#innerTip .title span{ font-weight:bold; font-size:14px; padding:5px 0px 0px 10px; float:left;}
+#innerTip .title a.close{text-indent:-9999px;width:20px;height:20px;display:block; background-position:-46px 0px; position:absolute; right:8px;top:5px;}
+#innerTip .title a.close:hover{ background-position:-65px -0px; }
+
+#innerTip .content{ background-position:-215px 0px; background-repeat:repeat-y; padding-left:5px;}
+#innerTip .content div span{ display:block; font-weight:bold; height:25px; font-size:13px; }
+
+#spriteInfo{ height:auto; overflow:hidden; padding-left:5px; border-bottom:1px solid #000; border-top:1px solid #000; }
+
+#spriteInfo ul{ padding-bottom:2px;}
+#spriteInfo ul li{ display:block; height:20px; font-family:Arial,'sans-serif',Verdana;}
+
+#spriteBaseInfo{ border-bottom:1px solid #000;}
+#spriteInfo ul li label{ width:50px; display:block; float:left; text-align:right; margin-right:5px;}
+#spriteInfo ul li input{ width:45px; border:1px solid #FFF; border-bottom:1px dashed #CCC; text-align:right; font-family:Arial,sans-serif,Verdana;}
+#spriteInfo ul li #spriteName{ width:135px; text-align:left; }
+
+#spritePreview{ overflow:hidden; padding:0 5px; border-bottom:1px solid #000;}
+#spritePreviewArea{background-color:#CCC; overflow:hidden;}
+
+
+#innerTip .bottom{ background-position:-430px bottom; background-repeat:no-repeat; height:32px;}
+
+/*图标遮罩*/
+#maskIcons{	position:absolute; top:0px;	left:0px; z-index:3; background-color:#F00; font-size:1px; line-height:1px;}
+
+/*图标块*/
+#icons{	position:absolute; top:0px;	left:0px; padding:162px 100px 100px 100px; z-index:2;}
+/*图标*/
+#icons img{	border:1px dashed #09F; }
+
+/*CSS Sprites遮罩层*/
+#maskSprites{ display:none; position:absolute; top:0px; left:0px; z-index:2002; background-color:#F00; cursor:crosshair;}
+
+/*拖曳遮罩层 */
+#maskDaggle{  display:none; position:absolute; top:0px; left:0px; z-index:2003;	background-color:#000; }
+
+
+/*底部 **************************************************** */
+#footbar{ width:100%; height:30px; position:absolute; bottom:0px; left:0px; background-color:#4B4B4B; z-index:2000;}
+/*小提示*/
+#bottomTip{ background-image:url(images/backgroundX.gif); background-repeat:repeat-x;}
+#bottomTip{
+	width:600px;
+	height:24px;
+	color:#FFF;
+	background-color:#009DFF;
+	background-position:0px 0px;
+	margin:4px 0 0 10px;
+}
+
+/* Resizable */
+
+.ui-resizable { position:absolute;}
+
+.ui-resizable-handle { position:absolute; font-size:0.1px; z-index:8888; display:block;}
+
+.ui-resizable-disabled .ui-resizable-handle, .ui-resizable-autohide .ui-resizable-handle { display:none; }
+
+.ui-resizable-helper { border: 1px dotted #F00; }
+
+.ui-resizable-se {width:7px; height:7px; border:1px solid #333; position:absolute; cursor:se-resize; right:0px; bottom:0px;}
+
+
+
+/* 最高遮罩层 **************************************************** */
+#mask{ display:none; background:#000; width:100%; height:100%; left:0px; top:0px; position:absolute; z-index:2004; }
+
+
+/* 弹出框 **************************************************** */
+.cswtDialog{ display:none; position:absolute; z-index:2005; background-color:#FFF; }
+
+.dialogBoderLeft,
+.dialogBoderRight{ background-image:url(images/lineY.gif); background-repeat:repeat-y;}
+
+.dialogBoderLeft{ background-position:left top; padding-left:2px;}
+.dialogBoderRight{ background-position:right top; padding-right:2px;}
+
+.cswtDialog .dialogHeader,
+.cswtDialog .dialogFooder{background-image:url(images/lineX.gif);}
+
+.cswtDialog .dialogHeader{ height:30px; cursor:move;}
+.cswtDialog .dialogHeader span.title{ font-weight:bold; font-size:14px; padding:5px 0px 0px 5px; float:left;}
+.cswtDialog .dialogHeader a.close{
+	text-indent:-9999px;
+	width:20px;
+	height:20px;
+	display:block;
+	background-position:-46px 0px;
+	position:absolute;
+	right:5px;
+	top:5px;
+}
+.cswtDialog .dialogHeader a.close:hover{ background-position:-65px -0px; }
+.cswtDialog .dialogBody{ padding:15px; }
+.cswtDialog .dialogFooder{ height:50px; background-position:bottom; text-align:center; }
+.cswtDialog .dialogFooder .dfbw{margin:0 auto; width:180px; padding-top:12px;}
+.cswtDialog .dialogFooder a{
+	width:65px;
+	height:28px;
+	margin:0px 5px;
+	display:block;
+	float:left;
+	background-position:-46px -35px;
+	text-decoration:none;
+	font-weight:bold;
+	color:#000;
+}
+.cswtDialog .dialogFooder a:hover,
+.cswtDialog .dialogFooder a.current{background-position:-46px -70px;}
+.cswtDialog .dialogFooder a span{padding:3px 0 0 0; display:block; font-size:14px;}
+
+#dialogImage{ width:350px; }
+#dialogCSSCode{ width:600px; }
+#dialogHelp{ width:500px; }
